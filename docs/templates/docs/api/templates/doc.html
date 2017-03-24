@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Third Party Stuff !-->
+    <script src='/static/jquery/jquery-2.0.2.min.js'></script>
+    <script type='text/javascript' src="/static/bootstrap-3-0-0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-3-0-0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/highlightjs/css/dracula.css">
+    <script src="/static/highlightjs/js/highlight.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <title>{{title}}</title>
+    <!-- First Party Stuff !-->
+    <link href="/static/docs/css/docs.css" type="text/css" rel="stylesheet">
+    <script src="/static/docs/js/main.js"></script>
+</head>
+<body>
+  {% include "home/includes/banner.html" %}
+  <div id="main">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>

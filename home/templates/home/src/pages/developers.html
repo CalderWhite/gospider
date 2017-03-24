@@ -1,0 +1,120 @@
+{% extends "home/templates/content.html" %}
+{% block content %}
+<meta name="page_index" content="0">
+<link href="/static/highlightjs/css/dracula.css" rel="stylesheet" type="text/css">
+<link href="/static/home/stylesheets/developers.css" rel="stylesheet" type="text/css">
+<link href="/static/home/stylesheets/jquery.bxslider.css" rel="stylesheet" type="text/css">
+<script src="/static/jquery/jquery.bxslider.min.js"></script>
+<script src="static/highlightjs/js/highlight.min.js"></script>
+<script>
+hljs.initHighlightingOnLoad();
+$(document).ready(function(){
+  slider = $('.slider1').bxSlider({
+    slideWidth: 700,
+    minSlides: 1,
+    maxSlides: 1,
+    slideMargin: 10,
+    touchEnabled:false,
+    infiniteLoop:true
+  });
+  /*
+  window.setInterval(function(){
+    slider.goToNextSlide();
+  },4000)
+  */
+});
+</script>
+<img src="/static/home/media/developers_back.jpg" class="background"></img>
+<div class="background-mod"></div>
+<center>
+  <img src="/static/home/media/cpu.png" height="240" width="240"></img>
+  <h1 class="fadein"  style="color:#E8E8E8;display:none;">Developers</h1>
+  <div class="features">
+      <a class="feature-lnk fadein" data-fadewait=750 data-fadetime=1000 href="#" style="margin-left:0x;display:none">Documentation</a>
+      <a class="feature-lnk fadein" data-fadewait=750 data-fadetime=1000 href="/docs/api" style="display:none">Api</a>
+  </div>
+</center>
+<div class="section">
+    <div class"half-sec">
+      <div class="slider1" style="height:600px;overflow:hidden">
+          <div class="slide">
+            <h3 style="margin:4px;">Python</h3>
+            <pre><code class="lang-python">
+import urllib.request, json
+url = "https://github.com"
+req = urllib.request.urlopen("https://{{HOST}}/api/summary?url=%s" % url)
+summary = json.loads(req.read())
+            </code>
+            </pre>
+          </div>
+          <div class="slide">
+            <h3 style="margin:4px;">C++</h3>
+            <pre><code class="lang-c++">
+#include &lt;curlpp/cURLpp.hpp&#62;
+#include &lt;curlpp/Options.hpp&#62;
+#include &lt;json.hpp&#62;
+
+curlpp::Cleanup myCleanup;
+
+std::ostringstream os;
+os &lt;&lt; curlpp::options::Url(std::string("https://{{HOST}}/api/summary?url=https://github.com"));
+string data = os.str();
+{
+  using namespace nlohmann
+  json summary = data
+}
+            </code>
+            </pre>
+          </div>
+          <div class="slide">
+            <h3 style="margin:4px">Javascript</h3>
+            <pre><code class="lang-javascript">
+var xhr = new XMLHttpRequest();
+var website = "https://github.com"
+var url = "https://{{HOST}}/api/summary?url=" + website;
+xhr.open('GET', url, true);
+xhr.send();
+xhr.onreadstatechange = function(){
+  if(xhr.readyState == 4 && xhr.status == 200){
+    summary = JSON.parse(xhr.responseText);
+  }
+}
+            </code>
+            </pre>
+          </div>
+          <div class="slide">
+            <h3 style="margin:4px">Java</h3>
+            <pre><code class="lang-java">
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import org.json.simple.parser.JSONParser;
+public class Main{
+  public static void main(String[] args){
+    String website = "https://github.com"
+    URL url = new URL("https://{{HOST}}/api/summary?url=" + website);
+    HttpURLConnection con = (HttpURLConnection) url.openConnection();
+    BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+    String output;
+    StringBuffer response = new StringBuffer();
+    while ((output = in.readLine()) != null) {
+     response.append(output);
+    }
+    in.close();
+    JSONParser parser = new JSONParser();
+    Object summary = parser.parse(output);
+  }
+}
+            </code>
+            </pre>
+          </div>
+        </div>
+    </div>
+    <div class="half-sec" style="left:100%;position:absolute;top:0%">
+      <p class="api-desc">
+        Our api seamlessly connects any language to our application's capabilities.
+      </p>
+    </div>
+</div>
+{% endblock %}

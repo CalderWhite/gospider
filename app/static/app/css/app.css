@@ -1,0 +1,43 @@
+/*
+  Since this isn't really a template, since its only meant for one page,
+  and it uses bootstrap !important was applied to every style since we don't want to deal with
+  conflicting styles
+*/
+body{
+  background: #26A0BF !important;
+  padding: 0px !important;
+  padding-top:10px !important;
+  padding-bottom: 10px !important;
+  margin:0px !important;
+}
+.outer{
+  display: table !important;
+  position: absolute !important;
+  width:100%;
+  min-height: 75%;
+}
+center{
+  display: table-cell !important;
+  vertical-align: middle !important;
+}
+#main{
+  border-radius: 10px !important;
+  background:#F0F0F0 !important;
+  margin-left:auto !important;
+  margin-right: auto !important;
+  margin-top:10px;
+  margin-bottom: 10px;
+  padding-top:10px;
+  padding-bottom: 55px;
+  width:75% !important;
+  min-height:75% !important;
+}
+input{
+  font-family: Courier !important;
+  font-weight: bold !important;
+}
+.col-lg-6{
+  padding:3px !important;
+  width: 70% !important;
+  float:none !important;
+}
