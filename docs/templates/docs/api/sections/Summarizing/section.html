@@ -1,0 +1,67 @@
+<section id="Summarizing" class="group">
+  <h1 class="page-header">Summarizing Api</h1>
+  <p>
+      Summarizing is the core function of superspider. An algorithm summarizes the contents,
+    and outputs a table-like json payload.
+  </p>
+  <div id="Summarizing-Usage" class="subgroup">
+    <h2>Usage</h2>
+    <p>
+      In short, here is the format for requesting a summary.
+    </p>
+    <pre><code class="dracula lang-HTTP">GET http://{app-domain}/api/summary?url={url} HTTP/1.1</code></pre>
+    <div class="bs-docs-example">
+      <p>
+        For this instance, say the server is running locally, and you wanted a summary of <a href="https://c9.io">c9.io</a>.
+      </p>
+      <pre><code class="dracula lang-http">GET http://127.0.0.1:8080/api/summary?url=https://c9.io HTTP/1.1</code></pre>
+    </div>
+    <h4>Things to avoid</h4>
+    <ul>
+      <li>
+        <p>
+          Putting quotes around the url like so:<br/>
+          <pre><code class="dracula lang-http">GET http://127.0.0.1:8080/api/summary?url="test.com" HTTP/1.1</code></pre>
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div id="Summarizing-Payload" class="subgroup">
+    <h2>Payload</h2>
+    <p>
+      Since this api is still small, the only return mime type available is JSON.
+      The json is formatted as follows.
+    </p>
+    <pre><code class="lang-json">
+{
+  "time" : {time}, //The time this was generated.
+  "structure" : {structure}, // represents what scraping technique was used.
+  "passages" : [
+    [keywords,text] // passages contains an array of arrays, with keywords and a passage from the webpage.
+  ]
+}
+    </code></pre>
+    <div class="bs-docs-example">
+      <p>
+        Here's what a summary for  <a href="https://c9.io">c9.io</a> would look like.
+      </p>
+      <pre><code class="lang-json">
+{
+    "structure": "mini",
+    "generated_time": "2017-03-19 20:05:52.708097",
+    "passages": [
+    [
+      [
+          "app",
+          "cloud9",
+          "workspace"
+      ],
+      "\n\n\n                            We use Cloud9 to develop our main application that helps landlords rent out their properties.\n                            It's great to keep your workspace in the cloud so it doesn't matter which machine you are working from.\n                            Everything will be as you left it, and customized to your preferences.\n                            \n"
+  ],
+  ...
+  ]
+}
+      </code></pre>
+    </div>
+  </div>
+</section>

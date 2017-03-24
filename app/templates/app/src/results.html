@@ -1,0 +1,32 @@
+{% extends "app/src/app.html" %}
+{% block content %}
+<link href="/static/app/css/results.css" type="text/css" rel="stylesheet">
+<div class="results">
+	<div class="container">
+		<div class="info">
+			<pre>
+Website: {{url}}
+Identified Structure: {{Stype}}
+Time Generated: {{time}}</pre>
+		</div>
+	</div>
+	<div class="container">
+		<table>
+			<tbody>
+				<tr>
+					<th>Keywords</th>
+					<th>Text</th>
+				</tr>
+	      {% for keywords,text in content.items %}
+	        <tr>
+	          <td><p>{{keywords}}</p></td><td><p>{{text}}</p></td>
+	        </tr>
+	      {% endfor %}
+			</tbody>
+		</table>
+	</div>
+	<p>
+		Ay
+	</p>
+</div>
+{% endblock %}

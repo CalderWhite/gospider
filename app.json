@@ -1,0 +1,8 @@
+{
+  "name": "Gospider",
+  "description": "The web app for superspider.",
+  "image": "heroku/python",
+  "repository": "https://github.com/team-chachet/jamhacks",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ]
+}

@@ -1,0 +1,54 @@
+body{
+  background:black;
+}
+#main{
+  width:100%;
+  top:50px;
+  position: relative;
+}
+#backgroundImg{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top:50px;
+  left:0px;
+  z-index: -1;
+  opacity:0.6;
+}
+.navbar{
+  position: fixed !important;
+  width:100%;
+  top:0px;
+  left:0px;
+  z-index: 1;
+}
+.giantH{
+  font-size: 62px !important;
+  color:white;
+  font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
+  font-weight: bold;
+  font-style: italic;
+}
+.slogan{
+  margin:10px !important;
+  margin-top:2.5% !important;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  color:#F0F0F0;
+}
+.try-it{
+  background:#00ccff !important;
+  border:1px solid #00ccff !important;
+  color:white !important;
+  font-weight: bold;
+  font-size:24px;
+  font-family: "HelveticaNeue-Thin", "Helvetica Neue Thin", "Helvetica Neue", "Open Sans Light", Helvetica, Arial, "Lucida Grande", sans-serif;
+  margin-top:15%;
+}
+.try-it:hover{
+  background:#00b8e6 !important;
+  border:1px solid #00b8e6 !important;
+}
+.try-it:active{
+  background: #00a3cc !important;
+  border:1px solid #00a3cc !important;
+}

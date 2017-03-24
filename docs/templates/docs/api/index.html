@@ -1,0 +1,22 @@
+{% extends "docs/api/templates/doc.html" %}
+{% block content %}
+<meta name="page_index" content="1">
+<script src="/static/home/js/main.js"></script>
+<div class="row">
+  <div class="col-xs-2"><!--SPACER!--></div>
+  <div class="col-md-7">
+    {% for path in section_paths %}
+      {% include path %}
+    {% endfor %}
+  </div>
+  <div id="sidebar-outline">
+    <nav class="col-md-1 bs-docs-sidebar hidden-print">
+      <ul class="nav nav-stacked bs-docs-sidenav fixed" id="sidebar">
+        {% for path in nav_paths %}
+          {% include path %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</div>
+{% endblock %}

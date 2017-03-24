@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>App | Super Spider</title>
+    <link href="../static/app/css/app.css" rel="stylesheet" type="text/css">
+    <link href="../static/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="outer">
+      <center>
+        <div id="main">
+          <div class="queryWindow">
+            <form id="urlForm" method="get" action="get_summary">
+              <div class="col-lg-6">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="url" name="url">
+                  <span class="input-group-btn">
+                    <button type="submit" form="urlForm" class="btn btn-default" type="button">Summarize</button>
+                  </span>
+                </div><!-- /input-group -->
+              </div><!-- /.col-lg-6 -->
+            </form>
+          </div>
+          <div class="content">
+            {% block content %}
+            {% endblock %}
+          </div>
+        </div>
+      </center>
+    </div>
+  </body>
+</html>
