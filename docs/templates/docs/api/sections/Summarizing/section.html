@@ -9,19 +9,19 @@
     <p>
       In short, here is the format for requesting a summary.
     </p>
-    <pre><code class="dracula lang-HTTP">GET http://{app-domain}/api/summary?url={url} HTTP/1.1</code></pre>
+    <pre><code class="dracula lang-HTTP">GET http://{{HOST}}/api/summary?url={url} HTTP/1.1</code></pre>
     <div class="bs-docs-example">
       <p>
-        For this instance, say the server is running locally, and you wanted a summary of <a href="https://c9.io">c9.io</a>.
+        For instance you wanted a summary of <a href="https://c9.io">c9.io</a>.
       </p>
-      <pre><code class="dracula lang-http">GET http://127.0.0.1:8080/api/summary?url=https://c9.io HTTP/1.1</code></pre>
+      <pre><code class="dracula lang-http">GET http://{{HOST}}/api/summary?url=https://c9.io HTTP/1.1</code></pre>
     </div>
     <h4>Things to avoid</h4>
     <ul>
       <li>
         <p>
           Putting quotes around the url like so:<br/>
-          <pre><code class="dracula lang-http">GET http://127.0.0.1:8080/api/summary?url="test.com" HTTP/1.1</code></pre>
+          <pre><code class="dracula lang-http">GET http://{{HOST}}/api/summary?url="test.com" HTTP/1.1</code></pre>
         </p>
       </li>
     </ul>

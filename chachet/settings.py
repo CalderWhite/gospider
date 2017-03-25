@@ -26,7 +26,7 @@ SECRET_KEY = 't@+_%848twhsahot$p1#4l2%5h!ine6evkk2b9y7y$%(h3gs_i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["gospider.herokuapp.com","chachet.herokuapp.com","django-tests-calderwhite.c9users.io","127.0.0.1"]
+ALLOWED_HOSTS = ["gospider.herokuapp.com","chachet.herokuapp.com","chachet-calderwhite.c9users.io","127.0.0.1"]
 
 
 # Application definition

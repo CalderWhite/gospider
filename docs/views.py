@@ -13,7 +13,8 @@ class api:
         data = {
             "title" : "Docs | Api",
             "nav_paths" : nav_paths,
-            "section_paths" : section_paths
+            "section_paths" : section_paths,
+            "HOST" : request.META["HTTP_HOST"]
         }
         return render(request,"docs/api/index.html",context=data)
     def index(request):
