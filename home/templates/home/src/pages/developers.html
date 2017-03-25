@@ -11,17 +11,17 @@ hljs.initHighlightingOnLoad();
 $(document).ready(function(){
   slider = $('.slider1').bxSlider({
     slideWidth: 700,
+    slideHeight: 400,
+    speed:1000,
     minSlides: 1,
     maxSlides: 1,
     slideMargin: 10,
     touchEnabled:false,
     infiniteLoop:true
   });
-  /*
   window.setInterval(function(){
     slider.goToNextSlide();
   },4000)
-  */
 });
 </script>
 <img src="/static/home/media/developers_back.jpg" class="background"></img>
@@ -35,7 +35,7 @@ $(document).ready(function(){
   </div>
 </center>
 <div class="section">
-    <div class"half-sec">
+    <div class="col-md-7">
       <div class="slider1" style="height:600px;overflow:hidden">
           <div class="slide">
             <h3 style="margin:4px;">Python</h3>
@@ -111,7 +111,7 @@ public class Main{
           </div>
         </div>
     </div>
-    <div class="half-sec" style="left:100%;position:absolute;top:0%">
+    <div class="col-md-4">
       <p class="api-desc">
         Our api seamlessly connects any language to our application's capabilities.
       </p>
