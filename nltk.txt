@@ -1,0 +1,4 @@
+brown
+averaged_perceptron_tagger
+stopwords
+punkt
