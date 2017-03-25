@@ -2,8 +2,8 @@ from setuptools import setup
 ##from distutils.core import setup
 import pip, sys
 setup(
-  name = 'gospider',
-  packages = ['gospider'], # this must be the same as the name above
+  name = 'chachet',
+  packages = ['chachet'], # this must be the same as the name above
   version = '0.1.14',
   description = 'A web scraper that adapts to any web page structure, and design.',
   author = 'Calder White',
@@ -14,7 +14,7 @@ setup(
   classifiers = [],
   include_package_data=True
 )
-if "install" in sys.argv or "build" in sys.argv:
+if "install" in sys.argv or "build" in sys.argv or "develop" in sys.argv:
     print("Checking dependancies")
     #Yes, I know this isn't the best way to do this, but it works.
     dep = ["nltk","bs4"]
