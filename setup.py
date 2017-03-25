@@ -4,7 +4,7 @@ import pip, sys
 setup(
   name = 'gospider',
   packages = ['gospider'], # this must be the same as the name above
-  version = '0.1.13',
+  version = '0.1.14',
   description = 'A web scraper that adapts to any web page structure, and design.',
   author = 'Calder White',
   author_email = 'calderwhite1@gmail.com',
@@ -28,4 +28,4 @@ if "install" in sys.argv or "build" in sys.argv:
     import nltk
     print("Grabbing required nltk packages")
     for i in nltkDep:
-nltk.download(i)
+        nltk.download(i)
