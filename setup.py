@@ -4,7 +4,7 @@ import pip, sys
 setup(
   name = 'chachet',
   packages = ['chachet'], # this must be the same as the name above
-  version = '0.1.14',
+  version = '0.1.17',
   description = 'A web scraper that adapts to any web page structure, and design.',
   author = 'Calder White',
   author_email = 'calderwhite1@gmail.com',
